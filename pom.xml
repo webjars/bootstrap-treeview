@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-treeview</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.0-SNAPSHOT</version>
     <name>Bootstrap Treeview JQuery plugin</name>
     <description>WebJar for Bootstrap Treeview</description>
     <url>http://jonmiles.github.io/bootstrap-treeview</url>
