@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-treeview</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0</version>
     <name>Bootstrap Treeview JQuery plugin</name>
     <description>WebJar for Bootstrap Treeview</description>
     <url>http://jonmiles.github.io/bootstrap-treeview</url>
@@ -50,7 +50,7 @@
         <url>http://github.com/webjars/bootstrap-treeview</url>
         <connection>scm:git:https://github.com/webjars/bootstrap-treeview.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/bootstrap-treeview.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>bootstrap-treeview-1.2.0</tag>
     </scm>
     
     <dependencies>
@@ -78,14 +78,14 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/dist" includes="*"/>
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/public" includes="css/*,js/*"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/dist" includes="*" />
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/public" includes="css/*,js/*" />
                                </move>
                             </target>
                         </configuration>
